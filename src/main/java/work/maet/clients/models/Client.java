@@ -1,17 +1,17 @@
 package work.maet.clients.models;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
-@Entity
-@Table
+@Entity(name = "client")
+@Table(name = "client")
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Client {
     @Id
     @GeneratedValue
@@ -24,5 +24,6 @@ public class Client {
     private String nationalId;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "client_id")
     private List<Address> addresses;
 }

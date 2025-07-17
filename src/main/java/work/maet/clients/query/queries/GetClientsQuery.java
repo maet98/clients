@@ -1,6 +1,7 @@
 package work.maet.clients.query.queries;
 
 public record GetClientsQuery(
-        String name
+        String name,
+        int pageNumber
 ) {
 }

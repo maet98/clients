@@ -1,8 +1,6 @@
-package work.maet.clients.command.commands;
+package work.maet.clients.controller.command.request;
 
-public record UpdateAddressCommand(
-        Long clientId,
-        Long addressId,
+public record AddAddressRequest(
         String line1,
         String line2,
         String city,
