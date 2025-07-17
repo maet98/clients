@@ -5,7 +5,7 @@ import work.maet.clients.models.Address;
 import java.util.List;
 
 public record ClientResponse(
-        long id,
+        Long id,
         String firstName,
         String lastName,
         String phoneNumber,
